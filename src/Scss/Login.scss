@@ -1,0 +1,19 @@
+.container {
+  padding-top: 60px;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .googlebtn {
+    cursor: pointer;
+    background-color: lightgray;
+    border: none;
+    padding: 20px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .googlebtn:hover {
+    background-color: lightslategrey;
+  }
+}

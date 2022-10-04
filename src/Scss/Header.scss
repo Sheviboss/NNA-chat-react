@@ -1,0 +1,40 @@
+.header {
+  position: sticky;
+  top: 0;
+  padding-top: 10px;
+  background-color: lightgreen;
+  .header-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-left: 2%;
+    padding-right: 2%;
+    // display: flex;
+    justify-content: flex-end;
+    padding-bottom: 10px;
+    .user-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      b {
+        font-size: 26px;
+        font-style: italic;
+        font-weight: 700;
+      }
+    }
+  }
+  .tittle {
+    background-color: #fff;
+  }
+  button {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    color: black;
+    font-size: 26px;
+    padding: 5px;
+    border-radius: 5%;
+  }
+  button:hover {
+    background-color: green;
+  }
+}
