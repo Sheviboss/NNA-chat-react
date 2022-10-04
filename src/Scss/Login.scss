@@ -7,13 +7,14 @@
   align-items: center;
   .googlebtn {
     cursor: pointer;
-    background-color: lightgray;
+    background-color: lightgreen;
+    border-radius: 20px;
     border: none;
     padding: 20px;
     font-size: 16px;
     font-weight: 600;
   }
   .googlebtn:hover {
-    background-color: lightslategrey;
+    background-color: green;
   }
 }

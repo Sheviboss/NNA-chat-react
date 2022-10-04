@@ -20,7 +20,7 @@ const Header = () => {
           <div>NNA Chat v1.0</div>
         )}
       </div>
-      <h1 className="tittle">Чат</h1>
+      {user ? <h1 className="tittle">Чат</h1> : ''}
     </div>
   );
 };
