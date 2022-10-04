@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/NNA-chat-react/static/css/main.5c3cfb41.css",
+    "main.css": "/NNA-chat-react/static/css/main.f39ab8b0.css",
     "main.js": "/NNA-chat-react/static/js/main.fa297a61.js",
     "index.html": "/NNA-chat-react/index.html",
-    "main.5c3cfb41.css.map": "/NNA-chat-react/static/css/main.5c3cfb41.css.map",
+    "main.f39ab8b0.css.map": "/NNA-chat-react/static/css/main.f39ab8b0.css.map",
     "main.fa297a61.js.map": "/NNA-chat-react/static/js/main.fa297a61.js.map"
   },
   "entrypoints": [
-    "static/css/main.5c3cfb41.css",
+    "static/css/main.f39ab8b0.css",
     "static/js/main.fa297a61.js"
   ]
 }
