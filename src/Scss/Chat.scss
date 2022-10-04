@@ -32,6 +32,7 @@
     height: 50px;
     padding-left: 10px;
     font-size: 18px;
+    border-radius: 20px;
   }
   .inputtext::placeholder {
     font-size: 18px;
@@ -40,7 +41,9 @@
     cursor: pointer;
     padding: 11px;
     font-size: 20px;
-    border-radius: 5%;
-    border: 1px solid lightgreen;
+    border-radius: 20px;
+    background-color: lightgreen;
+    box-shadow: none;
+    border: none;
   }
 }
