@@ -12,19 +12,18 @@ const Message = () => {
   const [user] = useAuthState(auth);
   return (
     <div className="messages">
-      {messages
-        ? messages.map((message) => (
-            <div
-              key={message.createdAt}
-              className={user.uid === message.uid ? 'message_inner' : 'message_inner-right'}>
-              <div className="user-info">
-                <img className="photo" src={message.photoURL} />
-                <h3 className="name">{message.displayName}</h3>
-              </div>
-              <p className="text">{message.text}</p>
+      {messages &&
+        messages.map((message) => (
+          <div
+            key={message.createdAt}
+            className={user.uid === message.uid ? 'message_inner' : 'message_inner-right'}>
+            <div className="user-info">
+              <img className="photo" src={message.photoURL} />
+              <h3 className="name">{message.displayName}</h3>
             </div>
-          ))
-        : ''}
+            <p className="text">{message.text}</p>
+          </div>
+        ))}
     </div>
   );
 };

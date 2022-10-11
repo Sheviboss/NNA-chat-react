@@ -1,7 +1,6 @@
 import { useContext, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Context } from '..';
-
 import Loader from './Loader';
 import { collection, Timestamp, orderBy } from 'firebase/firestore';
 import { addDoc } from 'firebase/firestore';
@@ -32,6 +31,7 @@ const Chat = () => {
           className="inputtext"
           type="text"
           value={value}
+          autoFocus={true}
           placeholder="введите сообщение"
           onChange={(e) => setValue(e.target.value)}></input>
         <button

@@ -5,16 +5,17 @@
   padding-bottom: 5px;
 }
 .container-chat {
-  overflow-y: auto;
+  overflow-y: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 .chat-buttons {
+  max-width: 1280px;
   background-color: #fff;
   position: sticky;
-  bottom: 0;
+  bottom: 0 !important;
   z-index: 10000;
   margin: 0 auto;
   padding-left: 5%;
