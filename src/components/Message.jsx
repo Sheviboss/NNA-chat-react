@@ -3,6 +3,9 @@ import { collection, query, orderBy } from 'firebase/firestore';
 import { useContext } from 'react';
 import { Context } from '..';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { getProfileData } from '../redux/slices/ProfileSlice';
+import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 
 const Message = () => {
   const { auth, firestore } = useContext(Context);
@@ -10,6 +13,8 @@ const Message = () => {
     query(collection(firestore, 'messages'), orderBy('createdAt')),
   );
   const [user] = useAuthState(auth);
+  console.log(click);
+  const dispatch = useDispatch();
   return (
     <div className="messages">
       {messages &&
@@ -17,9 +22,15 @@ const Message = () => {
           <div
             key={message.createdAt}
             className={user.uid === message.uid ? 'message_inner' : 'message_inner-right'}>
-            <div className="user-info">
+            <div
+              className="user-info"
+              onClick={() =>
+                dispatch(getProfileData([message.displayName, message.photoURL, message.email]))
+              }>
               <img className="photo" src={message.photoURL} />
-              <h3 className="name">{message.displayName}</h3>
+              <Link to="/profile">
+                <h3 className="name">{message.displayName}</h3>
+              </Link>
             </div>
             <p className="text">{message.text}</p>
           </div>

@@ -7,6 +7,8 @@ import 'firebase/compat/firestore';
 import { initializeApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
+import { store } from './redux/store/store';
+import { Provider } from 'react-redux';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyCPgeslWtAz00u_VRAiFjIBrtQmpK_dHCA',
@@ -33,6 +35,8 @@ root.render(
       firestore,
       auth,
     }}>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </Context.Provider>,
 );

@@ -3,6 +3,7 @@
 @import './Scss/Message';
 @import './Scss/Chat';
 @import './Scss/Loader';
+@import './Scss/UserProfile';
 * {
   margin: 0;
   padding: 0;
@@ -11,4 +12,9 @@
 
 .App {
   margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }

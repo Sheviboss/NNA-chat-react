@@ -1,0 +1,42 @@
+.profile {
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: flex-start;
+  .profileName {
+    font-size: 18px;
+  }
+  .profileImg {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    gap: 20px;
+    img {
+      border-radius: 50%;
+      width: 70px;
+      height: auto;
+    }
+  }
+  .profile-email {
+    font-size: 18px;
+  }
+  a {
+    display: flex;
+    justify-content: flex-end;
+    .backButton {
+      cursor: pointer;
+      background-color: lightgreen;
+      border-radius: 5px;
+      border: none;
+      padding: 10px;
+      font-size: 16px;
+      font-weight: 600;
+    }
+    .backButton:hover {
+      background-color: rgb(97, 196, 97);
+    }
+  }
+}

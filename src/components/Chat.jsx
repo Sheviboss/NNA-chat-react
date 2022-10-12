@@ -1,10 +1,10 @@
 import { useContext, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Context } from '..';
-import Loader from './Loader';
-import { collection, Timestamp, orderBy } from 'firebase/firestore';
+import { collection, Timestamp } from 'firebase/firestore';
 import { addDoc } from 'firebase/firestore';
 import Message from './Message';
+import Header from './Header';
 
 const Chat = () => {
   const { auth, firestore } = useContext(Context);
@@ -17,12 +17,14 @@ const Chat = () => {
       displayName: user.displayName,
       photoURL: user.photoURL,
       text: value,
+      email: user.email,
       createdAt: Timestamp.fromDate(new Date()),
     });
     setValue('');
   };
   return (
     <>
+      <Header title="ЧАТ" />
       <div className="container-chat">
         <Message />
       </div>
@@ -31,7 +33,6 @@ const Chat = () => {
           className="inputtext"
           type="text"
           value={value}
-          autoFocus={true}
           placeholder="введите сообщение"
           onChange={(e) => setValue(e.target.value)}></input>
         <button
